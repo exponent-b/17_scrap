@@ -1,6 +1,6 @@
 ### 메인
 from flask import Flask, render_template, request, send_file, redirect
-from scrapper import search_incruit ## scrapper.py에서 search_incruit 함수 받음
+from scrapper import search_incruit, saramin_incruit ## scrapper.py에서 search_incruit 함수 받음
 from file import save_to_csv
 
 app = Flask(__name__)
