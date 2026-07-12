@@ -63,9 +63,9 @@ def saramin_incruit(keyword, page):
             company = l.find("a", class_="track_event data_layer").text # .text를 하면 문자만 나옴
             title = l.find ("h2", class_ = "job_tit").find("a").get("title")
             location = l.find("div", class_ = "job_condition").find_all("span")[0].text
-            link = l.find("a", class_ = "data_layer").get("href") # href =의 값을 가져온다
+            link = "https://www.saramin.co.kr"+ l.find("a", class_ = "data_layer").get("href") # href =의 값을 가져온다
 
-            #print(link)
+            # print(link)
 
 
             jobs_data = {
@@ -75,6 +75,5 @@ def saramin_incruit(keyword, page):
                 "link" : link
             }
             jobs.append(jobs_data)
-            # print(jobs)
 
     return jobs
